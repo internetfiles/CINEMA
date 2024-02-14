@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-  overflow-x: hidden;
-}
 
 
 body {
@@ -13,6 +10,7 @@ body {
     font-family: 'DM Sans', sans-serif;
     transition-duration: 0.5s;
     transition-timing-function: linear;
+    overflow-x: hidden;
 
 }
 
