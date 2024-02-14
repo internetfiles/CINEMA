@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
+
 
 body {
     background-color: var(--navbar-background);
