@@ -10,7 +10,7 @@ CINEMAA is a website where you can stream different movies and tv shows for free
 ![App Screenshot](https://iwebp.extraimage.xyz/webp/auto/90/CJEW4LsOK5MjRukb_p_ok3T3ag77TJaDA1pcToko9C5BHdq9VKD0UBcqWUA7C98qc7bUzs.webp)
 
 ## Demo
-https://cinema-afh.pages.dev/
+https://munowatch.pages.dev/
 
 
 ## Features
