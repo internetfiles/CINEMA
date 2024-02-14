@@ -10,8 +10,8 @@ CINEMAA is a website where you can stream different movies and tv shows for free
 ![App Screenshot](https://iwebp.extraimage.xyz/webp/auto/90/CJEW4LsOK5MjRukb_p_ok3T3ag77TJaDA1pcToko9C5BHdq9VKD0UBcqWUA7C98qc7bUzs.webp)
 
 ## Demo
+https://cinema-afh.pages.dev/
 
-www.cinemaa.ga
 
 ## Features
 
@@ -37,5 +37,5 @@ I might recreate this whole website from scratch using React framework to make i
 
 ## 🔗 Links
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/immdipu)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://www.linkedin.com/in/dipu-chaurasiya-988786213/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/rakettvv)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://embarrasschill.com/ku0a4f9m8?key=b9efe2a691b31ec00526f1c2d77da2e2/)
