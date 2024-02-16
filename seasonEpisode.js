@@ -149,7 +149,7 @@ const releasedEpisode = function (curre) {
 };
 
 const unreleasedEpisodev = function (curre) {
-  return `<a class="unreleased_link" href="https://www.2embed.cc/embed/tmdb/tv?id=${id}&s=${
+  return `<a class="unreleased_link" href="https://vidsrc.to/embed/tv?id=${id}&s=${
     curre.season_number
   }&e=${curre.episode_number}"><img class="episode_image unreleased_image"
     src="./resources/D moviesand tv show.png" alt="${curre.name}">
