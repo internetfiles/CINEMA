@@ -3223,12 +3223,7 @@ body.light .paginationBtn {
     width: 55px;
     height: 55px;
 }
-.bmc-wbtn {
-    width: 55px;
-    height: 55px;
-}
-
- .google_translate_element {
+ #google_translate_element {
   display: inline-block;
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -3241,7 +3236,7 @@ body.light .paginationBtn {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.google_translate_element select {
+#google_translate_element select {
   padding: 5px;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -3249,24 +3244,24 @@ body.light .paginationBtn {
   color: #555;
 }
 
-.google_translate_element select:focus {
+#google_translate_element select:focus {
   outline: none;
   border-color: #66afe9;
   box-shadow: 0 0 5px rgba(102,175,233,0.5);
 }
 
-.google_translate_element select option {
+#google_translate_element select option {
   padding: 5px;
 }
 
-.google_translate_element .goog-te-combo {
+#google_translate_element .goog-te-combo {
   width: auto;
 }
 
-.google_translate_element .goog-te-button {
+#google_translate_element .goog-te-button {
   display: none;
 }
 
-.google_translate_element .goog-te-gadget-icon {
+#google_translate_element .goog-te-gadget-icon {
   display: none;
-}
+    }
