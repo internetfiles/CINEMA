@@ -168,8 +168,7 @@ const Castfun = (castee) => {
 };
 
 const Trailerfunc = function (id) {
-  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://www.2embed.cc/embedtvfull/{id}" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
-`;
+  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0"class="youtubePlayer" src="https://www.2embed.cc/embedtvfull/${id}" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>`;
 };
 
 /*  CLCIKED*/
