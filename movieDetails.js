@@ -268,7 +268,7 @@ const html2 = function (moviee) {
     " " +
     "|" +
     " " +
-    "Cinemaa"
+    "Munowatch"
   }`;
 
   let cate = "";
