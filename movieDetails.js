@@ -318,7 +318,7 @@ const html2 = function (moviee) {
             </div>
             
              <div class="playButtonContainer"> <span> 
-<a href='https://validcombine.com/bs3/V.0kP/3Cpsv/btmhViJoZEDF0m1AMcTtE/4QNpzsIV4tLvTgULxeMoTDgf3sMLjokC'><img alt='MotoGP Ad ' height='100' src='https://i.ibb.co/mDpf7rd/31065cc1ca5f5ead6955272f88e4a5d0-removebg-preview.png' width='100%'/></a></span> 
+<a href='https://validcombine.com/bs3/V.0kP/3Cpsv/btmhViJoZEDF0m1AMcTtE/4QNpzsIV4tLvTgULxeMoTDgf3sMLjokC'><img alt='Download Now' height='100' src='https://i.ibb.co/mDpf7rd/31065cc1ca5f5ead6955272f88e4a5d0-removebg-preview.png' width='100%'/></a></span> 
             </div>                       
 </div>
 
