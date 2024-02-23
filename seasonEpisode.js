@@ -132,7 +132,7 @@ const CurrEpisode = async (tv_id, currSea, currEpiso) => {
 };
 
 const releasedEpisode = function (curre) {
-  return `<a class="released_link" href=" https://www.2embed.cc/embed/tmdb/tv?id=${fetcid}&s=${
+  return `<a class="released_link" href="https://www.2embed.cc/embedtv/${fetcid}&s=${
     curre.season_number
   }&e=${curre.episode_number}"><img class="episode_image"
     src="./resources/D moviesand tv show.png" alt="${curre.name}">
