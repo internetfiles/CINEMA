@@ -132,10 +132,12 @@ const CurrEpisode = async (tv_id, currSea, currEpiso) => {
 };
 
 const releasedEpisode = function (curre) {
-  return `<a class="released_link" href="https://www.2embed.cc/embedtv/${fetcid}&s=${
+  return `<a class="released_link" href="https://vidsrc.to/embed/tv/${fetcid}&s=${
     curre.season_number
   }&e=${curre.episode_number}">
-    <iframe class="episode_iframe" src="https://www.2embed.cc/embedtv/${fetcid}&s=${curre.season_number}&e=${curre.episode_number}" frameborder="0" allowfullscreen></iframe>
+   <iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation"  class="youtubePlayer" src="https://vidsrc.to/embed/tv/${fetcid}&s=${curre.season_number}&e=${curre.episode_number}" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+
+
     <span class="runtime">${timeCon(curre.runtime)}</span>
     <div class="playsvg_container"><img class="playsvg" src="./resources/play-circle-fill.svg" alt=""></div>
   </a>
