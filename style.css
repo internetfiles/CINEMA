@@ -1645,9 +1645,7 @@ body.light .seasonul li:hover {
     display: flex;
     flex-direction: column;
     gap: 25px;
-
 }
-
 
 body.light .epishodes_card {
     box-shadow: rgb(0 0 0 / 1%) 0px 2px 3px 1px, rgb(0 0 0 / 26%) 0px 1px 4px 0px;
@@ -1656,6 +1654,7 @@ body.light .epishodes_card {
 
 .epishodes_card {
     display: flex;
+    flex-direction: column; /* Changed to column */
     gap: 20px;
     margin: 0px 43px 0 84px;
     border-radius: 8px;
@@ -1681,7 +1680,6 @@ body.light .epishodes_card {
     box-shadow: -6px 4px 24px 3px rgba(0, 0, 0, 0.73);
     border-radius: 50%;
     background: #2a2a2a69;
-
 }
 
 .playsvg:hover {
@@ -1692,32 +1690,28 @@ body.light .epishodes_card {
 
 .episode_detail {
     align-self: center;
+    text-align: center; /* Center align text */
 }
 
 .episode_title {
     color: #dbdbdb;
+    margin: 8px 0 5px 0px; /* Adjusted margin */
 }
 
 body.light .episode_title {
     color: #383838;
 }
 
-.episode_title {
-    margin: 8px 0 13px 0px;
-}
-
 .episode_description {
     color: #c9c9c9e0;
-    margin: 0 40px 16px 1px;
+    margin: 0 40px 0px 1px; /* Adjusted margin */
     font-size: 13px;
     max-height: 2rem;
     overflow: hidden;
 }
 
-
 body.light .episode_description {
     color: #646464;
-
 }
 
 .runtime {
