@@ -136,7 +136,6 @@ const releasedEpisode = function (curre) {
     curre.season_number
   }&e=${curre.episode_number}">
     <iframe class="episode_iframe" src="https://www.2embed.cc/embedtv/${fetcid}&s=${curre.season_number}&e=${curre.episode_number}" frameborder="0" allowfullscreen></iframe>
-    <img class="episode_image" src="./resources/D moviesand tv show.png" alt="${curre.name}">
     <span class="runtime">${timeCon(curre.runtime)}</span>
     <div class="playsvg_container"><img class="playsvg" src="./resources/play-circle-fill.svg" alt=""></div>
   </a>
