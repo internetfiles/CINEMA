@@ -2505,10 +2505,7 @@ body.light .msg_episode {
         object-fit: cover;
     }
 
-    .playsvg_container {
-        position: absolute;
-        transform: translateX(35px) translateY(-52px);
-    }
+    
 
     .runtime {
         position: absolute;
@@ -2537,9 +2534,7 @@ body.light .msg_episode {
         gap: 90px;
     }
 
-    .playsvg {
-        width: 29px;
-    }
+    
 
     .current_season {
         margin: 24px 1px 23px 15px;
@@ -2754,10 +2749,7 @@ body.light .msg_episode {
 @media (max-width:445px) {
 
 
-    .playsvg_container {
-        position: absolute;
-        transform: translateX(39px) translateY(-63px);
-    }
+    
 
     .CategoriesContainer {
         border: 1px solid #212546;
