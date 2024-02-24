@@ -260,11 +260,12 @@ function tvload() {
     let htm = "";
     console.log(dat);
     htm = html2(dat);
-tvshowsdetails.innerHTML = htm;
-let BigPoster = Bigposter(dat);
-posterBBig.innerHTML = BigPoster;
-sectionStory.textContent = dat.overview;
-let castarr = dat.credits.cast;
+    movieDetails.innerHTML = htm;
+    let BigPoster = Bigposter(dat);
+    posterBBig.innerHTML = BigPoster;
+    sectionStory.textContent = dat.overview;
+    let castarr = dat.credits.cast;
+st;
 
     // CAST FOR TV SHOWS
 
@@ -368,3 +369,5 @@ const simimarTvshowfun = (movie) => {
 searchbox.addEventListener("click", function () {
   location.replace("./search.html");
 });
+
+NowPlayingMoviesDiv.addEventListener("click", movieId);
