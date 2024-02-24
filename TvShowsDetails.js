@@ -186,7 +186,7 @@ const html2 = function (tvshow) {
     " " +
     "|" +
     " " +
-    "Cinemaa"
+    "Cinema"
   }`;
 
   let cate = "";
@@ -368,19 +368,18 @@ searchbox.addEventListener("click", function () {
   location.replace("./search.html");
 });
 
-const movieId = function (e) {
+const tvShowId = function (e) {
   let ele = e.target;
-  if (ele.classList.contains("poster")) {
+  if (ele.classList.contains("tvShow")) { // Assuming TV show elements have a class of "tvShow"
     let id = ele.dataset.id;
-    CurrMovie(id).then((dat) => {
-      let htm = "";
-      htm = html2(dat);
-      movieDetails.innerHTML = htm;
-      let BigPoster = Bigposter(dat);
-      posterBBig.innerHTML = BigPoster;
-      sectionStory.textContent = dat.overview;
+    // Assuming you have a function called `CurrTvShow` to fetch TV show details asynchronously
+    CurrTvShow(id).then((dat) => {
+      // Update this part according to how you want to display TV show details
+      let htm = ""; 
+      htm = html2(dat); // Assuming this function generates HTML for TV show details
+      tvShowDetails.innerHTML = htm; // Assuming tvShowDetails is the element to display TV show details
     });
   }
 };
 
-NowPlayingMoviesDiv.addEventListener("click", movieId);
+NowPlayingMoviesDiv.addEventListener("click", tvShowId); // Assuming NowPlayingTvShowsDiv contains TV show elements
