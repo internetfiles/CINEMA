@@ -368,4 +368,19 @@ searchbox.addEventListener("click", function () {
   location.replace("./search.html");
 });
 
+const movieId = function (e) {
+  let ele = e.target;
+  if (ele.classList.contains("poster")) {
+    let id = ele.dataset.id;
+    CurrMovie(id).then((dat) => {
+      let htm = "";
+      htm = html2(dat);
+      movieDetails.innerHTML = htm;
+      let BigPoster = Bigposter(dat);
+      posterBBig.innerHTML = BigPoster;
+      sectionStory.textContent = dat.overview;
+    });
+  }
+};
+
 NowPlayingMoviesDiv.addEventListener("click", movieId);
