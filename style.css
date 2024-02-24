@@ -2549,9 +2549,9 @@ body.light .msg_episode {
     }
 
     .Episodes_container {
-        display: relative;
+        display: flex;
         flex-direction: column;
-        gap: 90px;
+        gap: 180px;
     }
 
     .playsvg {
