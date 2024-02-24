@@ -1644,7 +1644,7 @@ body.light .seasonul li:hover {
 .Episodes_container {
     display: flex;
     flex-direction: column;
-    gap: 65px;
+    gap: 25px;
 }
 
 body.light .epishodes_card {
@@ -1655,7 +1655,7 @@ body.light .epishodes_card {
 .epishodes_card {
     display: flex;
     flex-direction: column; /* Changed to column */
-    gap: 20px;
+    gap: 65px;
     margin: 0px 43px 0 84px;
     border-radius: 8px;
     box-shadow: rgb(0 0 0 / 1%) 0px 2px 3px 1px, rgb(0 0 0 / 26%) 0px 1px 4px 0px;
@@ -1664,7 +1664,7 @@ body.light .epishodes_card {
 }
 
 .episode_image {
-    width: 200px;
+    width: 100%;
     border-radius: 7px;
     height: 100%;
     object-fit: cover;
