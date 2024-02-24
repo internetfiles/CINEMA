@@ -260,11 +260,11 @@ function tvload() {
     let htm = "";
     console.log(dat);
     htm = html2(dat);
-    movieDetails.innerHTML = htm;
-    let BigPoster = Bigposter(dat);
-    posterBBig.innerHTML = BigPoster;
-    sectionStory.textContent = dat.overview;
-    let castarr = dat.credits.cast;
+tvshowsdetails.innerHTML = htm;
+let BigPoster = Bigposter(dat);
+posterBBig.innerHTML = BigPoster;
+sectionStory.textContent = dat.overview;
+let castarr = dat.credits.cast;
 
     // CAST FOR TV SHOWS
 
