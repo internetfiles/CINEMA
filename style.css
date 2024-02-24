@@ -12,7 +12,24 @@ body {
 
 }
 
+body {
+  overflow-x: hidden;  
 
+  /* other styling */
+  border: solid 5px black;
+  border-radius: 5px;
+  height: 300px;
+  width: 300px;
+}
+
+img { height: 500px; }
+
+/* other styling */
+* {
+  background-color: #EAF0F6;
+  color: #2D3E50;
+  font-family: 'Arial';
+}
 
 :root {
     --background: #151728;
