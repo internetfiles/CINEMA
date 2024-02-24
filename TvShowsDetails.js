@@ -168,7 +168,8 @@ const Castfun = (castee) => {
 };
 
 const Trailerfunc = function (id) {
-  return `<iframe class="youtubePlayer" src="https://autoembed.to/trailer/tv/${id}" width="100%" height="100%" loading="lazy"  frameborder="0" allowfullscreen></iframe>`;
+  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation"  class="youtubePlayer" src="https://vidsrc.to/embed/tv/${id}" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
+`;
 };
 
 /*  CLCIKED*/
@@ -264,6 +265,7 @@ function tvload() {
     posterBBig.innerHTML = BigPoster;
     sectionStory.textContent = dat.overview;
     let castarr = dat.credits.cast;
+st;
 
     // CAST FOR TV SHOWS
 
