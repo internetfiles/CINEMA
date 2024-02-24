@@ -2509,7 +2509,7 @@ body.light .msg_episode {
 
     .epishodes_card {
         display: flex;
-        gap: 40px;
+        gap: 13px;
         box-shadow: var(--shadow);
         margin: 0px 12px 0 10px;
         border-radius: 8px;
