@@ -1644,7 +1644,7 @@ body.light .seasonul li:hover {
 .Episodes_container {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 65px;
 }
 
 body.light .epishodes_card {
