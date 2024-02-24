@@ -1672,7 +1672,9 @@ body.light .epishodes_card {
 
 .playsvg_container {
     position: absolute;
-    transform: translateX(74px) translateY(-85px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .playsvg {
@@ -1695,7 +1697,7 @@ body.light .epishodes_card {
 
 .episode_title {
     color: #dbdbdb;
-    margin: 8px 0 5px 0px; /* Adjusted margin */
+    margin: 8px 0 5px 0px; /* Adjustplay */
 }
 
 body.light .episode_title {
