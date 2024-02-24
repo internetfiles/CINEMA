@@ -2509,7 +2509,7 @@ body.light .msg_episode {
 
     .epishodes_card {
         display: flex;
-        gap: 13px;
+        gap: 11px;
         box-shadow: var(--shadow);
         margin: 0px 12px 0 10px;
         border-radius: 8px;
@@ -2551,7 +2551,7 @@ body.light .msg_episode {
     .Episodes_container {
         display: flex;
         flex-direction: column;
-        gap: 45px;
+        gap: 90px;
     }
 
     .playsvg {
