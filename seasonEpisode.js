@@ -132,12 +132,10 @@ const CurrEpisode = async (tv_id, currSea, currEpiso) => {
 };
 
 const releasedEpisode = function (curre) {
-  return `<a class="released_link" href="https://vidsrc.to/embed/tv/${fetcid}/${curre.season_number}/${curre.episode_number}">
-  <iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation"  frameborder="0"class="youtubePlayer" src="https://vidsrc.to/embed/tv/${fetcid}/${curre.season_number}/${curre.episode_number}
+  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation"  frameborder="0"class="youtubePlayer" src="https://vidsrc.to/embed/tv/${fetcid}/${curre.season_number}/${curre.episode_number}
 " allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
     <span class="runtime">${timeCon(curre.runtime)}</span>
     <div class="playsvg_container"><img class="playsvg" src="./resources/play-circle-fill.svg" alt=""></div>
-  </a>
   <div class="episode_detail">
     <h2 class="episode_title">
       <span class="episodenumm">${curre.episode_number}.</span> ${curre.name}
