@@ -2549,7 +2549,7 @@ body.light .msg_episode {
     }
 
     .Episodes_container {
-        display: flex;
+        display: relative;
         flex-direction: column;
         gap: 90px;
     }
