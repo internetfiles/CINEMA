@@ -2782,10 +2782,7 @@ body.light .msg_episode {
         color: #505050;
     }
 
-    .playsvg_container {
-        position: absolute;
-        transform: translateX(39px) translateY(-64px);
-    }
+    
 
     .alertMsg {
         left: -8%
