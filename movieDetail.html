@@ -26,7 +26,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Pacifico&display=swap"
+       <link rel="stylesheet" href="https://dl.dropbox.com/s/nb70og6psbi11lq/style.css?dl=0"> href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Pacifico&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css" />
     <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=65ce9c4d1eabb90019a54851&product=sticky-share-buttons&source=platform" async="async"></script>
@@ -131,6 +131,17 @@
                 </section>
                 <section class="Trailer_section">
                 </section>
+                <div class="button-container">
+  <button class="switch-button" onclick="openModal()">Watch Trailer</button>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <iframe id="myFrame" style="width: 100%; height: 360px;" frameborder="0" allowfullscreen="true"></iframe>
+  </div>
                 <section class=" Now_playing_movies_container Now_playing_movies_container_movieDetail" id="cast_con">
                     <h4 class="Now_playing_movies_container_title">Cast</h4>
 
