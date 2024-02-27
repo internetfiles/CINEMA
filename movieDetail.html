@@ -130,6 +130,145 @@
                 </section>
                 <section class="Trailer_section">
                 </section>
+                <!-- abar na -->
+                <style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .switch-button {
+    background-color: #170d1f;
+    border: 3px solid white; /* Added white border */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    outline: none; /* Added this line to remove outline on button click */
+}
+  .switch-button:hover {
+    background-color: #2e2b52;
+  }
+  /* Added CSS for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #6082B6;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden; /* Prevent vertical scrolling */
+}
+.modal-content h2 {
+  color: #fff; /* Change the color of the title */
+  font-size: 24px; /* Adjust the font size */
+  margin-bottom: 20px; /* Add some bottom margin for spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better visibility */
+}
+  }
+  .close {
+  color: red; /* Changed color to red */
+  float: right;
+  font-size: 36px; /* Increased font size to make it bigger */
+  font-weight: bold;
+}
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+    
+    
+<!-- <input type="text" id="searchQuery" placeholder="Enter movie title"> -->
+<div class="button-container">
+  <button class="switch-button" onclick="openModal()">Watch Trailer</button>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+  <center><h2>Title of the Trailer</h2></center> <!-- Placeholder for the title, will be dynamically updated -->
+    <iframe id="myFrame" style="width: 100%; height: 360px;" frameborder="0" allowfullscreen="true"></iframe>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  const movieTitle = document.querySelector('.movie_details_title').innerText.trim(); // Get the movie title from the specified element
+  fetch('https://api.themoviedb.org/3/search/movie?api_key=3754bca4db6bbf31b3d71ca72cdd0f2b&query=' + movieTitle)
+    .then(response => response.json())
+    .then(data => {
+      if (data.results.length > 0) {
+        const movieId = data.results[0].id;
+        fetchMovieTrailer(movieId);
+        document.getElementById('myModal').style.display = "block"; // Display the modal
+      } else {
+        alert('No movie found with the given title.');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      alert('Error searching for movie. Please try again later.');
+    });
+}
+
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none"; // Hide the modal
+}
+
+function fetchMovieTrailer(movieId) {
+  fetch('https://api.themoviedb.org/3/movie/' + movieId + '?api_key=3754bca4db6bbf31b3d71ca72cdd0f2b&append_to_response=videos')
+    .then(response => response.json())
+    .then(data => {
+      const trailer = data.videos.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
+      if (trailer) {
+        const trailerUrl = 'https://www.youtube.com/embed/' + trailer.key;
+        document.getElementById('myFrame').src = trailerUrl;
+        const trailerTitle = data.title; // Get the title of the trailer
+        document.querySelector('.modal-content h2').innerText = trailerTitle; // Set the modal title
+      } else {
+        alert('Trailer not found.');
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      alert('Error fetching movie data. Please try again later.');
+    });
+}
+</script>
+                <!-- abr na -->
                 <section class=" Now_playing_movies_container Now_playing_movies_container_movieDetail" id="cast_con">
                     <h4 class="Now_playing_movies_container_title">Cast</h4>
 
