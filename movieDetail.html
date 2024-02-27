@@ -320,7 +320,7 @@ function fetchMovieTrailer(movieId) {
     .then(data => {
       const trailer = data.videos.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
       if (trailer) {
-        const trailerUrl = 'https://www.youtube.com/embed/' + trailer.key;
+        const trailerUrl = 'https://www.youtube.com/embed/' + trailer.key + '?autoplay=1'; // Append autoplay=1 to play the trailer automatically
         document.getElementById('myFrame').src = trailerUrl;
         const trailerTitle = data.title; // Get the title of the trailer
         document.querySelector('.modal-content h2').innerText = trailerTitle; // Set the modal title
@@ -333,7 +333,8 @@ function fetchMovieTrailer(movieId) {
       alert('Error fetching movie data. Please try again later.');
     });
 }
-</script></section>
+</script>
+</section>
                 <section class=" Now_playing_movies_container Now_playing_movies_container_movieDetail" id="cast_con">
                     <h4 class="Now_playing_movies_container_title">Cast</h4>
 
