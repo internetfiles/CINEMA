@@ -52,7 +52,7 @@ const Castfun = (castee) => {
 };
 
 const Trailerfunc = function (id) {
-  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" sandbox="allow-forms allow-scripts allow-same-origin allow-top-navigation" class="youtubePlayer" src="https://vidsrc.to/embed/movie/${id}" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>`;
+  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://vidsrc.xyz/embed/movie/${id}" allowfullscreen="true" webkitallowfullscreen="true" referrerpolicy="origin" mozallowfullscreen="true"></iframe>`;
 };
 
 let url = document.location.href;
