@@ -268,7 +268,7 @@ const html2 = function (moviee) {
     " " +
     "|" +
     " " +
-    "Munowatch"
+    "Cinemaa"
   }`;
 
   let cate = "";
@@ -313,14 +313,7 @@ const html2 = function (moviee) {
             }" target="_blank">Google It!</a> </span> 
             </div>
             
-            <div class="playButtonContainer"> 
-            <span > <a class="GoogleButton" href="https://embarrasschill.com/j55za5sye8?key=96d8c58eb761cbf3c3c8d35e24af13a1" >Fast Download</a> </span> 
-            </div>
-            
-             <div class="playButtonContainer"> <span> 
-<a href='https://validcombine.com/bs3/V.0kP/3Cpsv/btmhViJoZEDF0m1AMcTtE/4QNpzsIV4tLvTgULxeMoTDgf3sMLjokC'><img alt='Download Now' height='100' src='https://i.ibb.co/mDpf7rd/31065cc1ca5f5ead6955272f88e4a5d0-removebg-preview.png' width='100%'/></a></span> 
-            </div>                       
-</div>
+    </div>
 
 </div> `;
 };
@@ -453,4 +446,3 @@ const movieId = function (e) {
 };
 
 NowPlayingMoviesDiv.addEventListener("click", movieId);
-
