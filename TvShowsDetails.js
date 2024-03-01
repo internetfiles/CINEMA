@@ -186,7 +186,7 @@ const html2 = function (tvshow) {
     " " +
     "|" +
     " " +
-    "Cinema"
+    "Cinemaa"
   }`;
 
   let cate = "";
@@ -367,19 +367,3 @@ const simimarTvshowfun = (movie) => {
 searchbox.addEventListener("click", function () {
   location.replace("./search.html");
 });
-
-const tvShowId = function (e) {
-  let ele = e.target;
-  if (ele.classList.contains("tvShow")) { // Assuming TV show elements have a class of "tvShow"
-    let id = ele.dataset.id;
-    // Assuming you have a function called `CurrTvShow` to fetch TV show details asynchronously
-    CurrTvShow(id).then((dat) => {
-      // Update this part according to how you want to display TV show details
-      let htm = ""; 
-      htm = html2(dat); // Assuming this function generates HTML for TV show details
-      tvShowDetails.innerHTML = htm; // Assuming tvShowDetails is the element to display TV show details
-    });
-  }
-};
-
-NowPlayingTvShowsDiv.addEventListener("click", tvShowId); // Assuming NowPlayingTvShowsDiv contains TV show elements
