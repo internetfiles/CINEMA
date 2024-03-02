@@ -124,80 +124,7 @@
                 <section class="Trailer_section">
                 </section>
                 <section><style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .button-container {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .switch-button {
-    background-color: #170d1f;
-    border: 3px solid white; /* Added white border */
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 8px;
-    outline: none; /* Added this line to remove outline on button click */
-}
-  .switch-button:hover {
-    background-color: #2e2b52;
-  }
-  /* Added CSS for the modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-.modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  width: 80%;
-  max-width: 600px;
-  background-color: #6082B6;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  overflow: hidden; /* Prevent vertical scrolling */
-}
-.modal-content h2 {
-  color: #fff; /* Change the color of the title */
-  font-size: 24px; /* Adjust the font size */
-  margin-bottom: 20px; /* Add some bottom margin for spacing */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better visibility */
-}
-  }
-  .close {
-  color: red; /* Changed color to red */
-  float: right;
-  font-size: 36px; /* Increased font size to make it bigger */
-  font-weight: bold;
-}
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-</style>
-</head>
-<style>
+  /* CSS styles */
   body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -272,11 +199,14 @@
 </style>
 </head>
 <body>
-    
-    
-<!-- <input type="text" id="searchQuery" placeholder="Enter movie title"> -->
-<div class="button-container">
-  <button class="switch-button" onclick="openModal()">Watch Trailer</button>
+
+<!-- Movie Details Section -->
+<div id="movieDetails">
+  <!-- Placeholder for movie details -->
+  <div class="movie_details_title" style="display:none;">Movie Title</div>
+  <div class="button-container">
+    <button class="switch-button">Watch Trailer</button>
+  </div>
 </div>
 
 <!-- Modal -->
@@ -284,12 +214,13 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
-  <center><h2>Title of the Trailer</h2></center> <!-- Placeholder for the title, will be dynamically updated -->
+    <center><h2>Title of the Trailer</h2></center> <!-- Placeholder for the title, will be dynamically updated -->
     <iframe id="myFrame" style="width: 100%; height: 360px;" frameborder="0" allowfullscreen="true"></iframe>
   </div>
 </div>
 
 <script>
+// Function to open the modal and fetch movie trailer
 function openModal() {
   const movieTitle = document.querySelector('.movie_details_title').innerText.trim(); // Get the movie title from the specified element
   fetch('https://api.themoviedb.org/3/search/movie?api_key=d386593b2c0761eafb2a2cdbdf7284a7&query=' + movieTitle)
@@ -309,11 +240,12 @@ function openModal() {
     });
 }
 
-
+// Function to close the modal
 function closeModal() {
   document.getElementById('myModal').style.display = "none"; // Hide the modal
 }
 
+// Function to fetch movie trailer
 function fetchMovieTrailer(movieId) {
   fetch('https://api.themoviedb.org/3/movie/' + movieId + '?api_key=3754bca4db6bbf31b3d71ca72cdd0f2b&append_to_response=videos')
     .then(response => response.json())
@@ -333,7 +265,11 @@ function fetchMovieTrailer(movieId) {
       alert('Error fetching movie data. Please try again later.');
     });
 }
+
+// Attach the openModal function to the button click event
+document.querySelector('.switch-button').addEventListener('click', openModal);
 </script>
+
 </section>
                 <section class=" Now_playing_movies_container Now_playing_movies_container_movieDetail" id="cast_con">
                     <h4 class="Now_playing_movies_container_title">Cast</h4>
