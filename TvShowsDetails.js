@@ -315,7 +315,7 @@ function tvload() {
 tvload();
 
 const recommTvshowFun = (mov) => {
-  let url = "./TvshowsDetails.html?id=" + encodeURIComponent(mov.id);
+  let url = "./TvShowsDetails.html?id=" + encodeURIComponent(mov.id);
   return `<div class="Now_playing_movies recommenMovies" >
     <a class="posterlink" href="${url}"> <img class="poster" data-id="${
     mov.id
@@ -367,3 +367,4 @@ const simimarTvshowfun = (movie) => {
 searchbox.addEventListener("click", function () {
   location.replace("./search.html");
 });
+
