@@ -340,7 +340,7 @@ const recommTvshowFun = (mov) => {
 };
 
 const simimarTvshowfun = (movie) => {
-  let url = "./TvshowsDetails.html?id=" + encodeURIComponent(movie.id);
+  let url = "./TvShowsDetails.html?id=" + encodeURIComponent(movie.id);
   return `<div class="Now_playing_movies similarMovies" >
     <a class="posterlink" href="${url}"> <img class="poster" data-id="${
     movie.id
