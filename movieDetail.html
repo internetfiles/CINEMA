@@ -197,6 +197,8 @@
     cursor: pointer;
   }
 </style>
+
+
 <!-- Movie Details Section -->
 <div id="movieDetails">
   <!-- Placeholder for movie details -->
@@ -234,6 +236,7 @@ function openModal() {
 // Function to close the modal
 function closeModal() {
   document.getElementById('myModal').style.display = "none"; // Hide the modal
+  document.getElementById('myFrame').src = ''; // Reset the iframe src attribute to stop the video
 }
 
 // Function to fetch movie trailer
@@ -259,9 +262,34 @@ function fetchMovieTrailer(movieId) {
 
 // Attach the openModal function to the button click event
 document.querySelector('.switch-button').addEventListener('click', openModal);
+
 </script>
 
 </section>
+<style>
+    .trailer-buttons {
+      text-align: center;
+    }
+    .trailer-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .trailer-buttons button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="trailer-buttons">
+    <button id="youtubeButton">YouTube</button>
+    <button id="dailymotionButton">Dailymotion</button>
+    <button id="vimeoButton">Vimeo</button>
+  </div>
                 <section class=" Now_playing_movies_container Now_playing_movies_container_movieDetail" id="cast_con">
                     <h4 class="Now_playing_movies_container_title">Cast</h4>
 
