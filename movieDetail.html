@@ -214,7 +214,17 @@
   <div class="modal-content">
     <span class="close" onclick="closeModal()">&times;</span>
     <center><h2>Title of the Trailer</h2></center> <!-- Placeholder for the title, will be dynamically updated -->
-    <iframe id="myFrame" style="width: 100%; height: 360px;" frameborder="0" allowfullscreen="true"></iframe>
+   <iframe id="myFrame" style="width: 100%; height: 360px;" frameborder="0" allowfullscreen="true"></iframe>
+
+<script>
+  var iframe = document.getElementById('myFrame');
+  iframe.requestFullscreen = iframe.requestFullscreen || iframe.mozRequestFullScreen || iframe.webkitRequestFullscreen || iframe.msRequestFullscreen;
+
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  }
+</script>
+
   </div>
 </div>
 
