@@ -313,9 +313,6 @@ const html2 = function (moviee) {
             }" target="_blank">Google It!</a> </span> 
             </div>
             
-            <div class="playButtonContainer"> 
-            <span > <a class="GoogleButton" href="https://embarrasschill.com/j55za5sye8?key=96d8c58eb761cbf3c3c8d35e24af13a1" >Fast Download</a> </span> 
-            </div>
             
              <div class="playButtonContainer"> <span> 
 <a href='https://t.me/SweetMoviePirate'><img alt='Download Now' height='100' src='https://i.ibb.co/vDP65wW/Find-and-Join-Telegram-channel-hogatoga-modified.png' width='100%'/></a></span> 
