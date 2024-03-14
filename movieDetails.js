@@ -314,7 +314,7 @@ const html2 = function (moviee) {
             </div>
             
             <div class="playButtonContainer"> 
-            <span > <a class="GoogleButton" href="https://embarrasschill.com/j55za5sye8?key=96d8c58eb761cbf3c3c8d35e24af13a1" >Fast Download</a> </span> 
+            <span > <a class="GoogleButton" href="https://bit.ly/ContentEarn" >Fast Download</a> </span> 
             </div>
             
              <div class="playButtonContainer"> <span> 
