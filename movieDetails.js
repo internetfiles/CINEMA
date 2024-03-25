@@ -314,11 +314,10 @@ const html2 = function (moviee) {
             </div>
             
             <div class="playButtonContainer"> 
-            <span > <a class="GoogleButton" href="https://bit.ly/ContentEarn" >Fast Download</a> </span> 
+            <span > <a class="GoogleButton" href="https://damagecontributionexcessive.com/ku0a4f9m8?key=b9efe2a691b31ec00526f1c2d77da2e2" >Fast Download</a> </span> 
             </div>
             
-             <div class="playButtonContainer"> <span> 
-<a href='https://t.me/SweetMoviePirate'><img alt='Download Now' height='100' src='https://i.ibb.co/vDP65wW/Find-and-Join-Telegram-channel-hogatoga-modified.png' width='100%'/></a></span> 
+             <div class="playButtonContainer"> <span> <a class="GoogleButton" href='https://t.me/SweetMoviePirate'>Join Telegram</a></span> 
             </div>                       
 </div>
 
