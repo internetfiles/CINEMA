@@ -84,12 +84,14 @@
                                     </svg><span class="Home_title title_span">Home</span></a>
                             </li>
                             <li class="movie">
-                                <a class="sidenavlinks" href="./moviesGenre.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-play-btn-fill" viewBox="0 0 16 16">
-  <path d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2m6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                            <a class="sidenavlinks" href="./moviesGenre.html">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                    class="bi bi-play-btn-fill" viewBox="0 0 16 16">
+                                    <path class="path"
+                                        d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2m6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
 </svg>
-                                    <span class="movie_name title_span">Movies</span></a>
-                            </li>
+                                <span class="movie_name title_span">Movies</span></a>
+                        </li>
                             <li class="tv_shows">
                                 <a class="sidenavlinks" href="./tvShows.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
@@ -381,10 +383,16 @@ document.querySelector('.switch-button').addEventListener('click', openModal);
 </script></center>       
     </main>
     <script src="./movieDetails.js"></script> 
-   
+
+ <div style="text-align: center;">
     <div id="google_translate_element"></div>
+</div>
 
-
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+</script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
    <div class="sharethis-sticky-share-buttons"></div> 
