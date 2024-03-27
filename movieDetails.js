@@ -117,6 +117,55 @@ window.addEventListener("scroll", function () {
   }
 });
 
+/* Trailer Player */
+
+function openModal() {
+  // Extract movie ID from the page URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const movieId = urlParams.get('id');
+
+  // If movie ID exists in the URL
+  if (movieId) {
+    fetchMovieTrailer(movieId);
+    document.getElementById('myModal').style.display = "block"; // Display the modal
+  } else {
+    document.getElementById('modalMessage').innerText = 'Movie ID not found in the URL.'; // Display message in modal
+  }
+}
+
+// Function to close the modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none"; // Hide the modal
+  document.getElementById('myFrame').src = ''; // Reset the iframe src attribute to stop the video
+  document.getElementById('modalMessage').innerText = ''; // Clear modal message
+}
+
+// Function to fetch movie trailer
+function fetchMovieTrailer(movieId) {
+  fetch('https://api.themoviedb.org/3/movie/' + movieId + '?api_key=3754bca4db6bbf31b3d71ca72cdd0f2b&append_to_response=videos')
+    .then(response => response.json())
+    .then(data => {
+      const trailer = data.videos.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
+      if (trailer) {
+        const trailerUrl = 'https://www.youtube.com/embed/' + trailer.key + '?autoplay=1'; // Append autoplay=1 to play the trailer automatically
+        document.getElementById('myFrame').src = trailerUrl;
+        const trailerTitle = data.title; // Get the title of the trailer
+        document.querySelector('.modal-content h2').innerText = trailerTitle; // Set the modal title
+      } else {
+        document.getElementById('modalMessage').innerText = 'Trailer not found.'; // Display message in modal
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching data:', error);
+      document.getElementById('modalMessage').innerText = 'Error fetching movie data. Please try again later.'; // Display message in modal
+    });
+}
+
+// Attach the openModal function to the button click event
+document.querySelector('.switch-button').addEventListener('click', openModal);
+
+
+
 lightDarkmode.addEventListener("click", function () {
   document.body.classList.toggle("light");
 
