@@ -51,7 +51,7 @@ const Castfun = (castee) => {
          </div>`;
 };
 
-// Function to get and set scroll position
+ // Function to get and set scroll position
     function saveScrollPosition() {
       sessionStorage.setItem('scrollPosition', window.scrollY);
     }
@@ -114,46 +114,39 @@ const Castfun = (castee) => {
               <a href="#" onclick="changeSource('https://vidsrc.to/embed/movie/${id}')">Server2</a>
             </div>
           </div>
-          <iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="95%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://vidsrc.xyz/embed/movie/${id}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de" allowfullscreen="true" webkitallowfullscreen="true" referrerpolicy="origin" mozallowfullscreen="true"></iframe>
+          <iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://vidsrc.xyz/embed/movie/${id}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de" allowfullscreen="true" webkitallowfullscreen="true" referrerpolicy="origin" mozallowfullscreen="true"></iframe>
         </div>
       `;
     }
 
-
-const movieLoad = function () {
-  let trailerHtml = Trailerfunc(fetcid);
-  Trailer_section.innerHTML = trailerHtml;
-  CurrMovie(fetcid).then((dat) => {
-    let htm = "";
-    htm = html2(dat);
-    movieDetails.innerHTML = htm;
-    let BigPoster = Bigposter(dat);
-    posterBBig.innerHTML = BigPoster;
-    sectionStory.textContent = dat.overview;
-    let castarr = dat.credits.cast;
-    if (castarr.length > 10) {
-      let NewCastarr = castarr.slice(0, 10);
-      NewCastarr.forEach((item) => {
-        if (item.profile_path !== null) {
-          const castehtml = Castfun(item);
-          Casdiv.insertAdjacentHTML("beforeend", castehtml);
+    // Define the movieLoad function
+    const movieLoad = function () {
+      let trailerHtml = Trailerfunc(fetcid);
+      Trailer_section.innerHTML = trailerHtml;
+      CurrMovie(fetcid).then((dat) => {
+        let htm = "";
+        htm = html2(dat);
+        movieDetails.innerHTML = htm;
+        let BigPoster = Bigposter(dat);
+        posterBBig.innerHTML = BigPoster;
+        sectionStory.textContent = dat.overview;
+        let castarr = dat.credits.cast;
+        if (castarr.length > 10) {
+          let NewCastarr = castarr.slice(0, 10);
+          NewCastarr.forEach((item) => {
+            if (item.profile_path !== null) {
+              const castehtml = Castfun(item);
+              // Append the castehtml to a container in your HTML
+              // For example:
+              // containerElement.appendChild(castehtml);
+            }
+          });
         }
       });
-    } else {
-      castarr.forEach((item) => {
-        if (item.profile_path !== null) {
-          const castehtml = Castfun(item);
-          Casdiv.insertAdjacentHTML("beforeend", castehtml);
-        }
-      });
-    }
+    };
 
-    const castdiv = document.querySelectorAll(".castdiv");
-    castdiv.forEach(
-      (ele, i) => (ele.style.transform = `TranslateX(${i * 115}%)`)
-    );
-  });
-};
+    // Call movieLoad function when the page loads
+    window.addEventListener('load', movieLoad);
 
 searchbox.addEventListener("click", function () {
   location.replace("./search.html");
@@ -553,6 +546,4 @@ const movieId = function (e) {
     });
   }
 };
-
-NowPlayingMoviesDiv.addEventListener("click", movieId);
 
