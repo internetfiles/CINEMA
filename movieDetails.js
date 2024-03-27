@@ -51,12 +51,75 @@ const Castfun = (castee) => {
          </div>`;
 };
 
-const Trailerfunc = function (id) {
-  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://vidsrc.xyz/embed/movie/${id}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de" allowfullscreen="true" webkitallowfullscreen="true" referrerpolicy="origin" mozallowfullscreen="true"></iframe>`;
-};
+// Function to get and set scroll position
+    function saveScrollPosition() {
+      sessionStorage.setItem('scrollPosition', window.scrollY);
+    }
 
-let url = document.location.href;
-let fetcid = url.slice(url.indexOf("=") + 1);
+    function restoreScrollPosition() {
+      var scrollPosition = sessionStorage.getItem('scrollPosition');
+      if (scrollPosition !== null) {
+        window.scrollTo(0, parseInt(scrollPosition));
+        sessionStorage.removeItem('scrollPosition');
+      }
+    }
+
+    // Call restoreScrollPosition when the page loads
+    restoreScrollPosition();
+
+    // Change iframe source
+    function changeSource(sourceUrl) {
+      var iframe = document.getElementById('iframe-embed');
+      iframe.src = sourceUrl;
+      saveScrollPosition(); // Save scroll position before refresh
+      var dropdown = document.getElementById("sourceDropdowna");
+      dropdown.classList.remove("show"); // Hide dropdown after selecting a source
+    }
+
+    // Toggle dropdown visibility
+    function toggleDropdown() {
+      var dropdown = document.getElementById("sourceDropdowna");
+      dropdown.classList.toggle("show");
+      if (dropdown.classList.contains('show')) {
+        document.getElementById("sourceButtona").addEventListener('click', showSources);
+      } else {
+        document.getElementById("sourceButtona").removeEventListener('click', showSources);
+      }
+    }
+
+    // Show dropdown on button click
+    function showSources() {
+      var dropdown = document.getElementById("sourceDropdowna");
+      dropdown.classList.add("show");
+      document.getElementById("sourceButtona").removeEventListener('click', showSources);
+    }
+
+    // Fetch movie ID from URL
+    let url = document.location.href;
+    let fetcid = url.slice(url.indexOf("=") + 1);
+
+    // Call the Trailerfunc with the fetched movie ID
+    document.write(Trailerfunc(fetcid));
+
+    // Function to embed trailer
+    function Trailerfunc(id) {
+      return `
+        <div style="display:block; margin:0 auto;" class="youtubePlayer" id="iframe-container" style="text-align:center;">
+          <div class="dropdown">
+            <div style="text-align: center;">
+                <button id="sourceButtona" onclick="toggleDropdown()" class="dropbtn">Select Server</button>
+            </div>
+            <div id="sourceDropdowna" class="dropdown-content">
+              <a href="#" onclick="changeSource('https://vidsrc.xyz/embed/movie/${id}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de')">Server 1</a>
+              <a href="#" onclick="changeSource('https://vidsrc.to/embed/movie/${id}')">Server2</a>
+            </div>
+          </div>
+          <iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="95%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://vidsrc.xyz/embed/movie/${id}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de" allowfullscreen="true" webkitallowfullscreen="true" referrerpolicy="origin" mozallowfullscreen="true"></iframe>
+        </div>
+      `;
+    }
+
+
 const movieLoad = function () {
   let trailerHtml = Trailerfunc(fetcid);
   Trailer_section.innerHTML = trailerHtml;
