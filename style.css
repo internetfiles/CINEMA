@@ -533,6 +533,32 @@ body.minimize_siderbar .Home_header_container {
     z-index: 1;
 }
 
+
+/* Trailers Player */
+  .button-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .switch-button {
+    background-color: #170d1f;
+    border: 3px solid white; /* Added white border */
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    outline: none; /* Added this line to remove outline on button click */
+}
+  .switch-button:hover {
+    background-color: #2e2b52;
+  }
+
+
 /* Now playing movies container*/
 
 .Now_playing_movies_container {
