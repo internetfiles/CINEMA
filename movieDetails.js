@@ -129,7 +129,7 @@ function openModal() {
     fetchMovieTrailer(movieId);
     document.getElementById('myModal').style.display = "block"; // Display the modal
   } else {
-    document.getElementById('modalMessage').innerText = 'Movie ID not found in the URL.'; // Display message in modal
+    alert('Movie ID not found in the URL.');
   }
 }
 
@@ -137,7 +137,6 @@ function openModal() {
 function closeModal() {
   document.getElementById('myModal').style.display = "none"; // Hide the modal
   document.getElementById('myFrame').src = ''; // Reset the iframe src attribute to stop the video
-  document.getElementById('modalMessage').innerText = ''; // Clear modal message
 }
 
 // Function to fetch movie trailer
@@ -152,15 +151,15 @@ function fetchMovieTrailer(movieId) {
         const trailerTitle = data.title; // Get the title of the trailer
         document.querySelector('.modal-content h2').innerText = trailerTitle; // Set the modal title
       } else {
-        document.getElementById('modalMessage').innerText = 'Trailer not found.'; // Display message in modal
+        // If trailer is not found, set the modal title to "Trailer Not Found"
+        document.querySelector('.modal-content h2').innerText = "Trailer Not Found"; 
       }
     })
     .catch(error => {
       console.error('Error fetching data:', error);
-      document.getElementById('modalMessage').innerText = 'Error fetching movie data. Please try again later.'; // Display message in modal
+      alert('Error fetching movie data. Please try again later.');
     });
 }
-
 // Attach the openModal function to the button click event
 document.querySelector('.switch-button').addEventListener('click', openModal);
 
