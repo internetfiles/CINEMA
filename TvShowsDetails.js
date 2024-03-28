@@ -301,54 +301,55 @@ function tvload() {
     }
 
 
-//function get tv shows trailers
-function openModal() {
-  // Extract TV show ID from the page URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const tvShowId = urlParams.get('id');
-
-  // If TV show ID exists in the URL
-  if (tvShowId) {
-    fetchTvShowTrailer(tvShowId);
-    document.getElementById('myModal').style.display = "block"; // Display the modal
-  } else {
-    alert('TV Show ID not found in the URL.');
+ // Function to close the modal
+  function closeModal() {
+    document.getElementById('myModal').style.display = "none"; // Hide the modal
+    document.getElementById('myFrame').src = ''; // Reset the iframe src attribute to stop the video
   }
-}
 
-// Function to close the modal
-function closeModal() {
-  document.getElementById('myModal').style.display = "none"; // Hide the modal
-  document.getElementById('myFrame').src = ''; // Reset the iframe src attribute to stop the video
-}
+  // Attach the openModal function to the button click event
+  document.querySelector('.switch-button').addEventListener('click', openModal);
 
-// Function to fetch TV show trailer
-function fetchTvShowTrailer(tvShowId) {
-  fetch('https://api.themoviedb.org/3/tv/' + tvShowId + '?api_key=3754bca4db6bbf31b3d71ca72cdd0f2b&append_to_response=videos')
-    .then(response => response.json())
-    .then(data => {
-      const trailer = data.videos.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
-      if (trailer) {
-        const trailerUrl = 'https://www.youtube.com/embed/' + trailer.key + '?autoplay=1'; // Append autoplay=1 to play the trailer automatically
-        document.getElementById('myFrame').src = trailerUrl;
-        const trailerTitle = data.name; // Get the title of the TV show
-        document.querySelector('.modal-content h2').innerText = trailerTitle; // Set the modal title
-      } else {
-        // If trailer is not found, set the modal title to "Trailer Not Found"
-        document.querySelector('.modal-content h2').innerText = "Trailer Not Found"; 
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching data:', error);
-      alert('Error fetching TV show data. Please try again later.');
-    });
-}
-// Attach the openModal function to the button click event
-document.querySelector('.switch-button').addEventListener('click', openModal);
+  // Attach the closeModal function to the close button
+  document.querySelector('.close').addEventListener('click', closeModal);
 
+  function openModal() {
+    // Extract TV show ID from the page URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const tvShowId = urlParams.get('id');
 
+    // If TV show ID exists in the URL
+    if (tvShowId) {
+      fetchTvShowTrailer(tvShowId);
+      document.getElementById('myModal').style.display = "block"; // Display the modal
+    } else {
+      alert('TV Show ID not found in the URL.');
+    }
+  }
 
-
+  // Function to fetch TV show trailer
+  function fetchTvShowTrailer(tvShowId) {
+    fetch('https://api.themoviedb.org/3/tv/' + tvShowId + '?api_key=3754bca4db6bbf31b3d71ca72cdd0f2b&append_to_response=videos')
+      .then(response => response.json())
+      .then(data => {
+        const trailer = data.videos.results.find(video => video.type === 'Trailer' && video.site === 'YouTube');
+        if (trailer) {
+          const trailerUrl = 'https://www.youtube.com/embed/' + trailer.key + '?autoplay=1'; // Append autoplay=1 to play the trailer automatically
+          document.getElementById('myFrame').src = trailerUrl;
+          const trailerTitle = data.name; // Get the title of the TV show
+          document.querySelector('.modal-content h2').innerText = trailerTitle; // Set the modal title
+        } else {
+          // If trailer is not found, set the modal title to "Trailer Not Found"
+          document.querySelector('.modal-content h2').innerText = "Trailer Not Found"; 
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+        alert('Error fetching TV show data. Please try again later.');
+      });
+  }
+  
+  
     // function to get similar to tv shows
 
     let similararr = dat.similar.results;
