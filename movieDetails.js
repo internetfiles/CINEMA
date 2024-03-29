@@ -51,71 +51,12 @@ const Castfun = (castee) => {
          </div>`;
 };
 
- // Function to get and set scroll position
-    function saveScrollPosition() {
-      sessionStorage.setItem('scrollPosition', window.scrollY);
-    }
+const Trailerfunc = function (id) {
+  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://vidsrc.xyz/embed/movie/${id}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de" allowfullscreen="true" webkitallowfullscreen="true" referrerpolicy="origin" mozallowfullscreen="true"></iframe>`;
+};
 
-    function restoreScrollPosition() {
-      var scrollPosition = sessionStorage.getItem('scrollPosition');
-      if (scrollPosition !== null) {
-        window.scrollTo(0, parseInt(scrollPosition));
-        sessionStorage.removeItem('scrollPosition');
-      }
-    }
-
-    // Call restoreScrollPosition when the page loads
-    restoreScrollPosition();
-
-    // Change iframe source
-    function changeSource(sourceUrl) {
-      var iframe = document.getElementById('iframe-embed');
-      iframe.src = sourceUrl;
-      saveScrollPosition(); // Save scroll position before refresh
-      var dropdown = document.getElementById("sourceDropdowna");
-      dropdown.classList.remove("show"); // Hide dropdown after selecting a source
-    }
-
-    // Toggle dropdown visibility
-    function toggleDropdown() {
-      var dropdown = document.getElementById("sourceDropdowna");
-      dropdown.classList.toggle("show");
-      if (dropdown.classList.contains('show')) {
-        document.getElementById("sourceButtona").addEventListener('click', showSources);
-      } else {
-        document.getElementById("sourceButtona").removeEventListener('click', showSources);
-      }
-    }
-
-    // Show dropdown on button click
-    function showSources() {
-      var dropdown = document.getElementById("sourceDropdowna");
-      dropdown.classList.add("show");
-      document.getElementById("sourceButtona").removeEventListener('click', showSources);
-    }
-
-    // Fetch movie ID from URL
-    let url = document.location.href;
-    let fetcid = url.slice(url.indexOf("=") + 1);    
-
-    // Function to embed trailer
-    function Trailerfunc(id) {
-      return `
-        <div style="display:block; margin:0 auto;" class="youtubePlayer" id="iframe-container" style="text-align:center;">
-          <div class="dropdown">
-            <div style="text-align: center;">
-                <button id="sourceButtona" onclick="toggleDropdown()" class="dropbtn">Select Server</button>
-            </div>
-            <div id="sourceDropdowna" class="dropdown-content">
-              <a href="#" onclick="changeSource('https://vidsrc.xyz/embed/movie/${id}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de')">Server 1</a>
-              <a href="#" onclick="changeSource('https://chatflix.org/player/movie/${id}?url=https://vidsrc.to/embed/movie/${id}')">Server 2</a>
-            </div>
-          </div>
-         <iframe style="display:block; margin:0 auto;" id="iframe-embed" width="90%" height="100%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://vidsrc.xyz/embed/movie/${id}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de" allowfullscreen="true" webkitallowfullscreen="true" referrerpolicy="origin" mozallowfullscreen="true"></iframe>
-        </div>
-      `;
-    }
-
+let url = document.location.href;
+let fetcid = url.slice(url.indexOf("=") + 1);
 const movieLoad = function () {
   let trailerHtml = Trailerfunc(fetcid);
   Trailer_section.innerHTML = trailerHtml;
@@ -188,7 +129,7 @@ function openModal() {
     fetchMovieTrailer(movieId);
     document.getElementById('myModal').style.display = "block"; // Display the modal
   } else {
-    alert('Movie ID not found in the URL.');
+    document.getElementById('modalMessage').innerText = 'Movie ID not found in the URL.'; // Display message in modal
   }
 }
 
@@ -196,6 +137,7 @@ function openModal() {
 function closeModal() {
   document.getElementById('myModal').style.display = "none"; // Hide the modal
   document.getElementById('myFrame').src = ''; // Reset the iframe src attribute to stop the video
+  document.getElementById('modalMessage').innerText = ''; // Clear modal message
 }
 
 // Function to fetch movie trailer
@@ -210,15 +152,15 @@ function fetchMovieTrailer(movieId) {
         const trailerTitle = data.title; // Get the title of the trailer
         document.querySelector('.modal-content h2').innerText = trailerTitle; // Set the modal title
       } else {
-        // If trailer is not found, set the modal title to "Trailer Not Found"
-        document.querySelector('.modal-content h2').innerText = "Trailer Not Found"; 
+        document.getElementById('modalMessage').innerText = 'Trailer not found.'; // Display message in modal
       }
     })
     .catch(error => {
       console.error('Error fetching data:', error);
-      alert('Error fetching movie data. Please try again later.');
+      document.getElementById('modalMessage').innerText = 'Error fetching movie data. Please try again later.'; // Display message in modal
     });
 }
+
 // Attach the openModal function to the button click event
 document.querySelector('.switch-button').addEventListener('click', openModal);
 
