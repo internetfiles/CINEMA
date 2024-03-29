@@ -116,9 +116,6 @@ const Castfun = (castee) => {
       `;
     }
 
-
-let url = document.location.href;
-let fetcid = url.slice(url.indexOf("=") + 1);
 const movieLoad = function () {
   let trailerHtml = Trailerfunc(fetcid);
   Trailer_section.innerHTML = trailerHtml;
