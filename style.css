@@ -403,7 +403,66 @@ body.minimize_siderbar .section_one_movieDetail {
 
 }
 
+/* Server Select  */
+ /* Dropdown styling */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show dropdown */
+    .show {
+      display: block;
+    }
+
+    /* Add this CSS for styling the dropdown links */
+    .dropdown-content a {
+      color: black;
+      padding: 10px 20px; /* Adjust padding as needed */
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s; /* Smooth transition for hover effect */
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd; /* Change background color on hover */
+    }
+    
+  /* Button styling */
+#sourceButtona {
+  background-color: #2e2b52;
+  border: 2px solid white; /* White border */
+  color: white; /* White text color */
+  padding: 6px 13px; /* Adjusted padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Display as inline block */
+  font-size: 10px; /* Adjusted font size */
+  margin: 4px 2px; /* Margin */
+  cursor: pointer; /* Cursor style */
+  border-radius: 10px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
 
 .home_header {
     color: #ffff;
