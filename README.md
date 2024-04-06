@@ -4,10 +4,10 @@ CINEMA is a website where you can stream different movies and tv shows for free.
 
 ## Screenshots
 
-![App Screenshot](https://iwebp.extraimage.xyz/webp/auto/90/CJEW4LsOK5MjRukb_p_ok3T3ag77TJaDA1pcToko9C5BHdq9VKD0UBcqWUA7CG9pE7bUzs.webp)
-![App Screenshot](https://iwebp.extraimage.xyz/webp/auto/90/CJEW4LsOK5MjRukb_p_ok3T3ag77TJaDA1pcToko9C5BHdq9VKD0UBcqWUA7CY97w7bUzs.webp)
-![App Screenshot](https://iwebp.extraimage.xyz/webp/auto/90/CJEW4LsOK5MjRukb_p_ok3T3ag77TJaDA1pcToko9C5BHdq9VKD0UBcqWUA7Cr_s_5k7bUzs.webp)
-![App Screenshot](https://iwebp.extraimage.xyz/webp/auto/90/CJEW4LsOK5MjRukb_p_ok3T3ag77TJaDA1pcToko9C5BHdq9VKD0UBcqWUA7C98qc7bUzs.webp)
+![App Screenshot](https://i.ibb.co/L1yfjgd/Screenshot-20240406-222521-removebg-preview.png)
+![App Screenshot](https://i.ibb.co/L1yfjgd/Screenshot-20240406-222521-removebg-preview.png)
+![App Screenshot](https://i.ibb.co/HTbmxMN/Screenshot-20240406-222553-removebg-preview.png)
+![App Screenshot](https://i.ibb.co/HTbmxMN/Screenshot-20240406-222553-removebg-preview.png)
 
 ## Demo
 https://munowatch.pages.dev/
