@@ -37,5 +37,5 @@ I might recreate this whole website from scratch using React framework to make i
 
 ## 🔗 Links
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/rakettvv)
-[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://embarrasschill.com/ku0a4f9m8?key=b9efe2a691b31ec00526f1c2d77da2e2/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://bracemascara.com/hyj6kuxb6a?key=3a53c6309d6e8e4689d1b52f896bdb55)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/munowatchlol)
