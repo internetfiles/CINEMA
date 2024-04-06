@@ -35,7 +35,7 @@ https://munowatch.pages.dev/
 
 I might recreate this whole website from scratch using React framework to make it more faster and efficient. i am also thinking about adding a "Add to my Favorite list" feature.
 
-## 🔗 Links
+## Links
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://bracemascara.com/hyj6kuxb6a?key=3a53c6309d6e8e4689d1b52f896bdb55)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/munowatchlol)
