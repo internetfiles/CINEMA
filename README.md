@@ -29,7 +29,7 @@ https://munowatch.pages.dev/
 
 [MIT](https://github.com/immdipu/CINEMAA/blob/main/LICENSE)
 
-![Logo](https://iwebp.extraimage.xyz/webp/auto/90/CJEW4LsOK5MjRukb_p_ok3T3ag77TJaDA1pcToko9C5BHdq9VKD0UBcqWUA7De_s_po7bUzs.webp)
+![Logo](https://i.ibb.co/dmJ8TK5/i-Markup-20240325-144050.jpg)
 
 ## Future plans
 
