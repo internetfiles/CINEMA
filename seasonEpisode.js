@@ -132,7 +132,7 @@ const CurrEpisode = async (tv_id, currSea, currEpiso) => {
 };
 
 const releasedEpisode = function (curre) {
-  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://vidsrc.xyz/embed/tv/${fetcid}/${curre.season_number}/${curre.episode_number}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de" allowfullscreen="true" webkitallowfullscreen="true" referrerpolicy="origin" mozallowfullscreen="true" autoplay></iframe>
+  return `<iframe style="display:block; margin:0 auto;" id="iframe-embed" width="100%" height="100%" scrolling="no" frameborder="0" class="youtubePlayer" src="https://vid.braflix.win/embed/tv/${fetcid}/${curre.season_number}/${curre.episode_number}?sub_url=https%3A%2F%2Fvidsrc.me%2Fsample.srt&ds_langs=en,de" allowfullscreen="true" webkitallowfullscreen="true" referrerpolicy="origin" mozallowfullscreen="true" autoplay></iframe>
     <span class="runtime">${timeCon(curre.runtime)}</span>
   <div class="episode_detail">
     <h2 class="episode_title">
